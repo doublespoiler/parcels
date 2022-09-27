@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 
 namespace Parcels
 {
@@ -25,6 +26,7 @@ namespace Parcels
 
     public void Configure(IApplicationBuilder app)
     {
+
       app.UseDeveloperExceptionPage();
       app.UseRouting();
 

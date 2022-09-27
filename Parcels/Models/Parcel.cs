@@ -40,7 +40,11 @@ namespace Parcels.Models
 
     public float CostToShip()
     {
-      float costToShip = 5;
+      //medium flat rate 430in^3
+      //medium 5lbs
+      //5 * 430 = 2150 
+      // 2150/100 = $20 + 5
+      float costToShip = (Weight * Volume()) / 100 + 5;
       return costToShip;
     }
   }

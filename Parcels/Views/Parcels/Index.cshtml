@@ -17,8 +17,15 @@
     <ul>
       @foreach (Parcel parcel in Model)
       {
-        <li>@parcel.Name, @parcel.Volume(), @parcel.CostToShip(), @parcel.Weight</li>
+        <li>@parcel.Name</li>
+          <ul>
+            <li>Volume: @parcel.Volume() ft<sup>3</sup></li>
+            <li>Weight: @parcel.Weight lbs</li>
+            <li>Shipping Cost: $@parcel.CostToShip()</li>
+          </ul>
       }
     </ul>
+    <a href="/parcels/new">Add a new parcel to the list.</a><br>
+    <a href="/">Go Home, Fry</a>
   </body>
 </html>
